@@ -7,12 +7,11 @@ from langchain_core.prompts import PromptTemplate
 from wine_tool import predict_wine_quality
 
 # 加载 .env 文件中的环境变量
-#load_dotenv()
+load_dotenv()
 
 # 设置通义千问密钥（如果你已经在 .env 中设置了，这行可以注释掉）
-# 但为了保险，我们直接在代码里设置（记得把 '你的新密钥' 换成真实的！）
-os.environ["DASHSCOPE_API_KEY"] = "sk-ws-H.EDHMLMY.Cy9K.MEUCIQDJ7m_qQ6ZwS-U2cB6hJY8wXCr6ZYTJlrQrlhyw0ldOZAIgSegYEi5x_3Tbcaul5R-OqMgLzNjf4JI4NcWgEmR9rAA"
-
+# 但为了保险，我们直接在代码里设置
+#os.environ["DASHSCOPE_API_KEY"] = ""
 # 初始化大模型（通义千问）
 llm = ChatTongyi(model="qwen-plus", temperature=0)
 
